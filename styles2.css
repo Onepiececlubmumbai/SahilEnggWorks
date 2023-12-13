@@ -1,0 +1,314 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #CAE1F3;
+}
+
+/* Header styles */
+.header {
+    background-color: #3498db;
+    
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 82px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.nav {
+    list-style: none;
+    background-color: #8EBFE6;
+    width: 100%; /* Add this to make it span the entire width */
+    text-align: center; /* Center the navigation items horizontally */
+    
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 20px;
+    position: relative;
+} 
+
+.nav-item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -10px; /* Adjust the line position */
+    width: 1.3px; /* Line width */
+    background-color: white; /* Line color */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Main content styles */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* About section styles */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* About box styles */
+.about-topic {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.about-topic img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.about-topic-text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Add styles for the full-width button with a line break */
+.explore-button {
+    text-align: center;
+    margin-top: 20px; /* Add margin to move the button away from the footer */
+    margin-bottom: 20px;
+}
+
+.explore-button a {
+    display: block; /* Make the button a block-level element */
+    position: center;
+    width: 110%; /* Set the width to 100% to make it full-width */
+    padding: 12px 0; /* Add padding for spacing */
+    background-color: #3498db; /* Button background color */
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.explore-button a:hover {
+    background-color: #2980b9; /* Slightly darker pastel blue on hover */
+}
+
+
+.explore-button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #3498db;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-nav {
+    list-style: none;
+}
+
+.footer-nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav-item {
+    margin: 0 20px;
+}
+
+.footer-nav-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            max-height: 150vh; /* Adjust the height as needed */
+            overflow: hidden;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+            animation: slide 15s infinite; /* Adjust the animation duration as needed */
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            5% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            95% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow products to wrap to the next line */
+    justify-content: center; /* Center-align products horizontally */
+    gap: 20px; /* Add spacing between products */
+    padding: 20px; /* Add padding to the container */
+}
+
+/* Add styles for product-item */
+.product-item {
+    width: 300px;
+    height: 750px;
+    flex: 0 0 calc(33.33% - 20px); /* Set each product to occupy 33.33% width with spacing */
+    border: 2px ridge #3498db; /* Add a border around each product */
+    border-radius: 10px;
+    box-sizing: border-box; /* Include the border in the width calculation */
+    text-align: center; /* Center-align product content */
+    padding: 10px; /* Add padding within each product item */
+    aspect-ratio: 3/4;
+}
+
+.product-item h3 {
+    margin-top: 10px; /* Add margin below product image */
+}
+
+.product-box img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio and cover the box */
+    aspect-ratio: 3/4;
+
+}
+
+.product-box {
+    font-family: 'Times New Roman', Times, serif; /* Set the font-family to Times New Roman */
+    text-align: center; /* Center-align product content */
+    padding: 10px;
+}
+
+/* Add styles for product title (h3) */
+.product-box h2 {
+    margin-top: 10px; /* Add margin below product image */
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border: 1px solid #3498db;
+    background-color: #CADEEE;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-details {
+    margin-left: 20px;
+}
+
+.product-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-style: italic;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.product-navigation {
+    text-align: center;
+}
+
+.product-nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product-nav-button:hover {
+    background-color: #2980b9;
+}
+
+.catalog-title{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.catalog-title h2 {
+    font-size: 45px;
+    font-weight: bold;
+}

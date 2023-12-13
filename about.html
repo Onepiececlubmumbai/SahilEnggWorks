@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Demo</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            Sahil Engineering Works
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="catalog.html">Catalog</a></li>
+                <li class="nav-item"><a href="about.html">About Us</a></li>
+                <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="slideshow-section">
+            <div class="slideshow-container">
+                <img src="image1.png" alt="Slide 1">
+                <img src="image2.png" alt="Slide 2">
+                <img src="image3.png" alt="Slide 3">
+                <img src="image4.png" alt="Slide 4">
+                <img src="image5.png" alt="Slide 5">
+                <img src="image6.png" alt="Slide 6">
+                <img src="image7.png" alt="Slide 7">
+                <img src="image8.png" alt="Slide 8">
+            </div>
+        </section>
+        
+        <section class="about-section">
+
+            <div class="intro-text">
+                <h1 class="intro-heading">Your Trusted Manufacturer of Leather Belt Machines</h1>
+                <p class="intro-description">Sahil Engineering Works is committed to delivering top-quality products and innovative solutions to the leather industry. With over 25 years of experience, we have established ourselves as a trusted name in the field.</p>
+            </div>
+
+            <div class="about-topic">
+                <img src="workshop.jpg" alt="Workshop">
+                <h2 class="about-heading">Workshop</h2>
+                <p class="about-description">Our state-of-the-art workshop is equipped with the latest technology, allowing us to manufacture high-quality leather belt machines.</p>
+            </div>
+
+            <div class="about-topic">
+                <img src="history.jpg" alt="History">
+                <h2 class="about-heading">History</h2>
+                <p class="about-description">With a history dating back to 1996, we have a track record of continuous growth and a commitment to excellence.</p>
+            </div>
+
+            <div class="about-topic">
+                <img src="why-us.jpg" alt="Why Us">
+                <h2 class="about-heading">Why Us</h2>
+                <p class="about-description">We stand out with our dedication to quality, innovation, and exceptional customer service, making us a preferred choice in the industry.</p>
+            </div>
+		
+	    </section>
+
+		<section>
+		<div class="explore-button">
+    		<a href="catalog.html" class="explore-button">Explore Our Catalog</a>
+		</div>
+		</section>
+
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <ul class="footer-nav-list">
+                <li class="footer-nav-item"><a href="index.html">Home</a></li>
+                <li class="footer-nav-item"><a href="catalog.html">Catalog</a></li>
+                <li class="footer-nav-item"><a href="about.html">About Us</a></li>
+                <li class="footer-nav-item"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slideshow-container img');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
+</body>
+</html>
